@@ -22,6 +22,8 @@
         <!--&lt;!&ndash;Jdk&ndash;&gt;-->
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+        <apollo.client.version>0.11.0-SNAPSHOT</apollo.client.version>
+        <xxl-job.version>1.9.1</xxl-job.version>
         <!--&lt;!&ndash; test &ndash;&gt;-->
         <!--<junit.version>4.12</junit.version>-->
         <!--<testng.version>6.8.8</testng.version>-->
@@ -89,8 +91,18 @@
         <!--<hutools.version>4.0.10</hutools.version>-->
     </properties>
 
-    <!--<dependencyManagement>-->
-        <!--<dependencies>-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.ctrip.framework.apollo</groupId>
+                <artifactId>apollo-client</artifactId>
+                <version>${apollo.client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-job-core</artifactId>
+                <version>${xxl-job.version}</version>
+            </dependency>
             <!--&lt;!&ndash;&lt;!&ndash; test &ndash;&gt;&ndash;&gt;-->
             <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
                 <!--&lt;!&ndash;<groupId>junit</groupId>&ndash;&gt;-->
@@ -369,8 +381,8 @@
                     <!--</exclusion>-->
                 <!--</exclusions>-->
             <!--</dependency>-->
-        <!--</dependencies>-->
-    <!--</dependencyManagement>-->
+        </dependencies>
+    </dependencyManagement>
 
 
 </project>
